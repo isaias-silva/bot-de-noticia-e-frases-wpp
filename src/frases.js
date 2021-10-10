@@ -52,7 +52,7 @@ let tema=readline.question('tema:')
 
         const dados = [];
         for (let i = 0; i <(document.querySelectorAll('.frase.fr')).length; i++) {
-            dados.push(("♫♪♩·.¸¸.·~"+document.querySelectorAll('.frase.fr')[i].textContent.replace('\n', ".")+"~ ·.¸¸.·♩♪♫ "))
+            dados.push(("♫♪♩·.¸¸.·~"+document.querySelectorAll('.frase.fr')[i].textContent.replace('\n', ".")+"~ ·.·♩♪♫ "))
         }
 
         return (dados);
