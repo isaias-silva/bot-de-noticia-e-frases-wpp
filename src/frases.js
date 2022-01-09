@@ -52,7 +52,7 @@ let tema=readline.question('tema:')
 
         const dados = [];
         for (let i = 0; i <(document.querySelectorAll('.frase.fr')).length; i++) {
-            dados.push(("♫♪♩·.¸¸.·~"+document.querySelectorAll('.frase.fr')[i].textContent.replace('\n', ".")+"~ ·.·♩♪♫ "))
+            dados.push((`❤️Ɍ₳Ɨ₦Ħ₳ ⱠƗⱠƗ₮Ħ ❤️ ɌɆƗ Ƶ₳€Ԟ❤️━━━{     `+document.querySelectorAll('.frase.fr')[i].textContent.replace('\n', ".")+"       }━━*KING <3 QUEEN*feliz 2022!"))
         }
 
         return (dados);

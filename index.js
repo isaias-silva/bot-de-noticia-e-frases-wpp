@@ -32,7 +32,7 @@ async function connect() {
 
     async function work() {
       console.log(text.title())
-        let gruplvo = ['꧁༒ℓiℓiн 🪄🪄ƒrαsєs σƒc ꧂']// alvos onde as mensagens serão enviadas grupos/contatos
+        let gruplvo = ['Ddzinha','A capitã 🌷frases e links','꧁༒🅛🅘🅛🅘🅗❤️🅩🅐🅒🅚 🅕🅡🅐🅢🅔🅢 🅞🅕🅒༒꧂']// alvos onde as mensagens serão enviadas grupos/contatos
         if (gruplvo.length != 0) {
           
           console.log(text.menu())
@@ -73,18 +73,19 @@ async function connect() {
                 case '2':
 
                     for (let i in gruplvo) {
-                        let title = '<3Zackblack===[bot frases]===Lilih<3'
+                        let title = ``
                         const groupalvo = await driver.findElement(webdriver.By.xpath(`//span[@title="${gruplvo[i]}"]`));
                         await groupalvo.click()
 
                         const textbar = await driver.findElement(webdriver.By.xpath(`(//div[@class="_13NKt copyable-text selectable-text"])[2]`))
 
                         const frases = await scrap.frases()
-                        await textbar.sendKeys("<" + title + ">", webdriver.Key.ENTER)
+                        await textbar.sendKeys(title , webdriver.Key.ENTER)
 
                         for (let i in frases) {
-
-                            await textbar.sendKeys("<3 " + frases[i] + " <3", webdriver.Key.ENTER)
+                            console.log(frases[i])
+                            await textbar.sendKeys( frases[i], webdriver.Key.ARROW_RIGHT)
+                            await textbar.sendKeys(' ',webdriver.Key.ENTER)
                         }
                     }
                     await work()
